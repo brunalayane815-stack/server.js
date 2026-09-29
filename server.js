@@ -33,11 +33,11 @@ const alterarPedido = (req,res)=> {
     const dados = req.body
 
      pedidos.forEach((pedido) => {
-        if(pedido.id = id){                                
+        if(pedido.id == id){                                
 
             pedido.item = dados.item
             pedido.local = dados.local
-            pedido.dataRegistro = dados.dataregistro
+            pedido.dataRegistro = dados.dataRegistro
             pedido.valor = dados.valor
             pedido.patrimonio= dados.patrimonio
         }
@@ -47,7 +47,7 @@ const alterarPedido = (req,res)=> {
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-const porta = 4000;
+const porta = 5000;
 
 app.get("/", mostrarpedido);
 app.post("/", novoPedido);
