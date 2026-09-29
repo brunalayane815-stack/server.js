@@ -1,1 +1,1 @@
-# server.json
+# server.js
